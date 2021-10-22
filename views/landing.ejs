@@ -1,0 +1,332 @@
+<!-- CSS only -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+<!-- JavaScript Bundle with Popper -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+<script>
+    const APIURL = "https://node-login-portal.herokuapp.com";
+//const APIURL = "http://localhost:8000";
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+
+<section class="top_bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="top_main_heading">
+                    <h1>Node API</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Accordian start -->
+
+<div class="login_section ">
+    <div class="container">
+    <div class="row">
+        
+            <div class="col-md-12">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                <span>
+                                    <h3>Login API</h3>
+                                </span> <span class="label label-info"></span><br />
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+
+                                <code>Link: <a href="#">https://node-login-portal.herokuapp.com/login</a></code> <br /><small> Body :  {email:123, password:123}</small><br /><small>API Type : POST</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                <span>
+                                    <h3>SignUp API</h3>
+                                </span> <span class="label label-info"></span><br />
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"> <code>Link: <a href="#">https://node-login-portal.herokuapp.com/signup</a></code><br /><small> Body : 
+                                    {
+                                   
+                                    name: name,
+                                    email: email,
+                                    userType: userType,
+                                    gender: gender,
+                                    age: age,
+                                    phone: phone,
+                                    password: hash
+                                    };</small><br /><small>API Type : POST</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            <span>
+                                <h3>List API</h3>
+                            </span> <span class="label label-info"></span><br />
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body"> <code>Link: <a href="#">https://node-login-portal.herokuapp.com/list</a></code><br /><small> Header : Header:  Content-Type:application/json,Authorization: Bearer Token</small><br /><small>Body : Update link in url
+                                ;</small><br /><small>API Type : GET</small></div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
+                            <span>
+                                <h3>ForgotPassword API</h3>
+                            </span> <span class="label label-info"></span><br />
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body"> <code>Link: <a href="#">https://node-login-portal.herokuapp.com/forgotpassword</a></code> <br /><small>Body :  {email: a@gmail.com} 
+                                </small><br /><small> 
+                                        
+                            
+                                </small><br /><small>API Type : POST</small></div>
+                    </div>
+                </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        <span>
+                            <h3>ResetPassword API</h3>
+                        </span> <span class="label label-info"></span><br />
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"> <code>Link: <a href="#">https://node-login-portal.herokuapp.com/resetpassword</a></code> <br /><small>Body : {password:123, password2:123} </small><br /><small>API Type : PUT</small></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        <span>
+                            <h3>Change Password API</h3>
+                        </span> <span class="label label-info"></span><br />
+                    </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"> <code>Link: <a href="#">https://node-login-portal.herokuapp.com/changepassword</a></code> <br /><small>Body :  {password:123, password2:123} 
+                            ;</small><br /><small>Header:  Content-Type:application/json,Authorization: Bearer Token</small><br /><small>API Type : PUT</small></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                        <span>
+                            <h3>Update Details API</h3>
+                        </span> <span class="label label-info"></span><br />
+                    </button>
+                </h2>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"> <code>Link: <a href="#">https://node-login-portal.herokuapp.com/update</a></code> <br /><small>Body :  {
+                            name: name,
+                            email: email,
+                            userType: userType,
+                            gender: gender,
+                            age: age,
+                            phone: phone
+
+                            };</small><br /><small>API Type : PUT</small></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingeight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseeight" aria-expanded="false" aria-controls="flush-collapseeight">
+                        <span>
+                            <h3>Delete API</h3>
+                        </span> <span class="label label-info"></span><br />
+                    </button>
+                </h2>
+                <div id="flush-collapseeight" class="accordion-collapse collapse" aria-labelledby="flush-headingeight"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"> <code>Link: <a href="#">https://node-login-portal.herokuapp.com/userId</a></code> <br /><small>Body : updateID in url;</small><br /><small>API Type : DELETE</small></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingnine">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsenine" aria-expanded="false" aria-controls="flush-collapsenine">
+                      <span><h3>Register API only for User</h3></span> <span class="label label-info"></span><br />
+                  </button>
+                </h2>
+                <div id="flush-collapsenine" class="accordion-collapse collapse" aria-labelledby="flush-headingnine" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body"> <code><a href="#">https://node-login-portal.herokuapp.com/Register</a></code> <br /><small>Body : {
+                    
+                    name: name,
+                    email: email,
+                    userType:user,
+                    gender: gender,
+                    age: age,
+                    phone: phone,
+                    password: hash
+                   
+                };</small><br /><small>API Type : POST</small></div>
+                </div>
+              
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingten">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseten" aria-expanded="false" aria-controls="flush-collapseten">
+                      <span><h3>Find Particular User API</h3></span> <span class="label label-info"></span><br />
+                  </button>
+                </h2>
+                <div id="flush-collapseten" class="accordion-collapse collapse" aria-labelledby="flush-headingten" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body"> <code>Link: <a href="#">https://node-login-portal.herokuapp.com/id</a></code> <br /><small>Body :  Update id in url</small><br /><small>API Type : GET</small></div>
+                </div>
+              </div>
+            </div>
+
+
+        </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+        background: #000 !important;
+    }
+
+    ul.navbar-nav li a {
+        color: #fff !important;
+    }
+
+    navbar-brand{
+        color: #fff;
+    }
+
+
+    body {
+        background: #eee;
+    }
+
+    .panel-order .row {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .panel-order .row:last-child {
+        border: 0px;
+    }
+
+    .panel-order .row .col-md-1 {
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    .panel-order .row .col-md-1 img {
+        width: 50px;
+        max-height: 50px;
+    }
+
+    .panel-order .row .row {
+        border-bottom: 0;
+    }
+
+    .panel-order .row .col-md-11 {
+        border-left: 1px solid #ccc;
+    }
+
+    .panel-order .row .row .col-md-12 {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    .panel-order .row .row .col-md-12:last-child {
+        font-size: 11px;
+        color: #555;
+        background: #efefef;
+    }
+
+    .panel-order .btn-group {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .panel-order .panel-body {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .panel-order .panel-deading {
+        margin-bottom: 0;
+    }
+
+
+    .login_section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    section.top_bar {
+    background: #000000;
+    }
+    .top_main_heading h1 {
+    color: #ffffff;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    }
+    button.accordion-button span h3 {
+    font-size: 17px;
+    }
+    .accordion-flush .accordion-item:last-child{
+        border: 1px solid rgba(0,0,0,.125);
+    }
+</style>
